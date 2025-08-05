@@ -13,10 +13,16 @@ bot = telebot.TeleBot(BOT_TOKEN)
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
     welcome_msg = (
-        "👋 *Welcome to LeakCheck Bot!*\n"
-        "🧠 Just send me any *phone number*, *email*, or *name* —\n"
-        "and I'll search leaked data from multiple dark web sources.\n\n"
-        "⚠️ *Note:* This bot is for educational/research use only.\n\n"
+        "👋 *Welcome to LeakCheck Bot!*
+"
+        "🧠 Just send me any *phone number*, *email*, or *name* —
+"
+        "and I'll search leaked data from multiple dark web sources.
+
+"
+        "⚠️ *Note:* This bot is for educational/research use only.
+
+"
         "🔎 Type and send your query below ⬇️"
     )
     bot.send_message(message.chat.id, welcome_msg, parse_mode="Markdown")
